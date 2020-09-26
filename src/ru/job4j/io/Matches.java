@@ -4,19 +4,17 @@ import java.util.Scanner;
 
 public class Matches {
     public static void main(String[] args) {
+        String username;
+        boolean player = true;
         int matches = 11;
         while (matches > 0) {
-            matches = userAction(matches, "Пользователь №1");
+            username = player ? "Пользователь №1" : "Пользователь №2";
+            matches = userAction(matches, username);
             if (isWin(matches)) {
-                System.out.println("Пользователь №1 победил!");
+                System.out.println(username + " победил!");
                 break;
             }
-
-            matches = userAction(matches, "Пользователь №2");
-            if (isWin(matches)) {
-                System.out.println("Пользователь №2 победил!");
-                break;
-            }
+            player = !player;
         }
     }
 
