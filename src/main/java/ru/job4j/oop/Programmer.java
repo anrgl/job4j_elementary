@@ -4,7 +4,6 @@ public class Programmer extends Engineer {
     private String favoriteDevLanguage;
     private int yearExp;
 
-
     public String getFavoriteDevLanguage() {
         return favoriteDevLanguage;
     }
